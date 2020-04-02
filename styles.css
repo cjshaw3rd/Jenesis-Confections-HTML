@@ -1,0 +1,37 @@
+
+.head{
+    display:inline;
+
+    
+}
+body{ 
+    color: rgb(238, 10, 10);
+    background-color: rgb(14, 23, 36);
+    
+}
+header{
+    content: center;
+    background-image:url("images/logo.jpg");
+    height: 300px;
+    background-size: 100% 90%;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+li{
+    display: inline-block;
+    margin: 35px;
+    margin-bottom: 0%;
+    margin-left: 1px;
+    margin-top: 5px;
+    margin-right: 11%;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+.search-box{
+    border: none;
+    margin-left: 10%;
+}
+    
