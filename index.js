@@ -48,3 +48,13 @@ window.onload=function winload(){
 
 
 }
+("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  ('slideshow > div:first')
+    .fadeOut(1000)
+    .next(IMG_20200327_200842_920.jpg)
+    .fadeIn(1000)
+    .end(strawberrybananpudding.jpg)
+    .appendTo('slideshow');
+}, 3000);
