@@ -1,9 +1,16 @@
 window.onload=function winload(){
+  loc=window.location.pathname;
+  dir=loc.substring(0,loc.lastIndexOf('/'));
+
+  ss_photo_list=['photo1.JPG','photo2.JPG','photo3.JPG','photo4.JPG'];
+
+
   var searchbox=document.getElementsByClassName('search-box')[0];
   var searchex=document.getElementsByClassName('sexit')[0];
   var mag=document.getElementsByClassName('mag')[0];
   var search=document.getElementsByClassName('souter')[0];
   var sin=document.getElementsByClassName('search')[0];
+  var slide_show=document.getElementById('ss_photo');
 
 
   var sopen=0;
@@ -46,15 +53,18 @@ window.onload=function winload(){
   mag.addEventListener('mouseover',toggle_mag);
   mag.addEventListener('mouseout',toggle_mag);
 
+  ss_start=0
+  ss_counter=1
+  function slide_change(){
+    slide_show.style.backgroundImage="url("+dir+'/images/ss_photos/'+ss_photo_list[ss_counter]+")";
+    if (ss_counter!=3){
+      ss_counter++;
+    }
+    else{
+      ss_counter=0;
+    }
+  };
+
+  setInterval(slide_change,5000);
 
 }
-("#slideshow > div:gt(0)").hide();
-
-setInterval(function() {
-  ('slideshow > div:first')
-    .fadeOut(1000)
-    .next(IMG_20200327_200842_920.jpg)
-    .fadeIn(1000)
-    .end(strawberrybananpudding.jpg)
-    .appendTo('slideshow');
-}, 3000);
