@@ -65,6 +65,6 @@ window.onload=function winload(){
     }
   };
 
-  setInterval(slide_change,5000);
+  setInterval(slide_change,3000);
 
 }
